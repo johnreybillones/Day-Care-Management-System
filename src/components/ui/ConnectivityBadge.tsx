@@ -1,0 +1,1 @@
+// TODO: ConnectivityBadge component
