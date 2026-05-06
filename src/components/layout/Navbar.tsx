@@ -11,17 +11,17 @@ const navLinks = [
 export default function Navbar() {
 	const location = useLocation();
 	return (
-		<header className="relative bg-white">
-			<div className="relative z-10 flex items-center justify-between px-4 py-2 md:px-8">
+		<header className="sticky top-0 z-50 bg-white shadow-nav">
+			<div className="flex items-center justify-between px-4 py-2 md:px-8">
 				<div className="flex items-center gap-2 min-w-[44px] min-h-[44px]">
 					<img
-						src="/logo.png"
-						alt="Day Care Center Seal"
+						src="/barangay-seal.png"
+						alt="Official Seal of Barangay San Antonio de Padua I"
 						className="h-10 w-10 rounded-full object-cover"
 					/>
 					<div className="leading-tight">
-						<span className="font-bold text-2xl text-primary-600 tracking-wide">DCC<span className="text-red-600">MS</span></span>
-						<div className="text-xs text-primary-500 -mt-1">
+						<span className="font-body font-bold text-2xl text-brand-blue tracking-wide">DCC<span className="text-brand-red">MS</span></span>
+						<div className="font-body text-xs text-neutral-700 -mt-1">
 							Day Care Center<br />Management System
 						</div>
 					</div>
@@ -32,8 +32,8 @@ export default function Navbar() {
 							key={link.to}
 							to={link.to}
 							className={clsx(
-								"font-semibold text-primary-500 hover:text-primary-700 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center",
-								location.pathname === link.to && "text-primary-600 font-bold"
+								"font-body font-semibold text-brand-blue hover:text-brand-blue-dark transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center",
+								location.pathname === link.to && "font-bold"
 							)}
 						>
 							{link.name}
@@ -42,19 +42,20 @@ export default function Navbar() {
 				</nav>
 				<Link
 					to="/login"
-					className="ml-4 bg-primary-400 hover:bg-primary-500 text-white font-semibold rounded-lg px-5 py-2 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
+					className="ml-4 bg-brand-blue hover:bg-brand-blue-dark text-white font-body font-semibold rounded-full px-5 py-2 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
 				>
 					Login
 				</Link>
 			</div>
-			{/* Cloud SVG divider */}
-			<div className="absolute left-0 right-0 bottom-0 z-0">
-				<svg viewBox="0 0 1440 100" width="100%" height="60" className="w-full h-[60px]" preserveAspectRatio="none">
-					<path
-						d="M0,60 C360,120 1080,0 1440,60 L1440,100 L0,100 Z"
-						fill="#1da1f2"
-					/>
-				</svg>
+			{/* Cloud row — brand-blue bg makes white clouds visible */}
+			<div className="bg-brand-blue flex items-start overflow-hidden" aria-hidden="true">
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-72" />
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-80 -ml-16" />
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-72 -ml-16" />
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-96 -ml-20" />
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-80 -ml-20" />
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-72 -ml-16" />
+				<img src="/assets/solid-cloud.png" alt="" role="presentation" className="flex-none w-96 -ml-20" />
 			</div>
 		</header>
 	);

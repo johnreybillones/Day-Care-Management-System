@@ -27,12 +27,12 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="bg-white border-t border-gray-100 pt-6 pb-2 px-4 md:px-8">
+		<footer className="bg-white border-t border-neutral-100 pt-6 pb-2 px-4 md:px-8">
 			<div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-6xl mx-auto">
-				<div className="flex flex-col items-start gap-4 min-w-[44px] min-h-[44px]">
+				<div className="flex flex-col items-start gap-4">
 					<img
-						src="/logo.png"
-						alt="Day Care Center Seal"
+						src="/barangay-seal.png"
+						alt="Official Seal of Barangay San Antonio de Padua I"
 						className="h-12 w-12 rounded-full object-cover"
 					/>
 					<div className="flex gap-3 mt-2">
@@ -50,13 +50,13 @@ export default function Footer() {
 						))}
 					</div>
 				</div>
-				<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 flex-1">
+				<div className="grid grid-cols-1 gap-8 flex-1 sm:grid-cols-3">
 					<div>
-						<h3 className="font-semibold mb-2">System</h3>
+						<h3 className="font-body font-bold text-sm text-neutral-900 uppercase tracking-wide mb-4">System</h3>
 						<ul className="space-y-1">
 							{systemLinks.map((l) => (
 								<li key={l.name}>
-									<Link to={l.to} className="text-gray-700 hover:text-primary-500 min-w-[44px] min-h-[44px] inline-block">
+									<Link to={l.to} className="font-body text-base text-neutral-700 hover:text-brand-blue min-w-[44px] min-h-[44px] inline-block">
 										{l.name}
 									</Link>
 								</li>
@@ -64,11 +64,11 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h3 className="font-semibold mb-2">Explore</h3>
+						<h3 className="font-body font-bold text-sm text-neutral-900 uppercase tracking-wide mb-4">Explore</h3>
 						<ul className="space-y-1">
 							{exploreLinks.map((l) => (
 								<li key={l.name}>
-									<Link to={l.to} className="text-gray-700 hover:text-primary-500 min-w-[44px] min-h-[44px] inline-block">
+									<Link to={l.to} className="font-body text-base text-neutral-700 hover:text-brand-blue min-w-[44px] min-h-[44px] inline-block">
 										{l.name}
 									</Link>
 								</li>
@@ -76,11 +76,11 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h3 className="font-semibold mb-2">Community</h3>
+						<h3 className="font-body font-bold text-sm text-neutral-900 uppercase tracking-wide mb-4">Community</h3>
 						<ul className="space-y-1">
 							{communityLinks.map((l) => (
 								<li key={l.name}>
-									<Link to={l.to} className="text-gray-700 hover:text-primary-500 min-w-[44px] min-h-[44px] inline-block">
+									<Link to={l.to} className="font-body text-base text-neutral-700 hover:text-brand-blue min-w-[44px] min-h-[44px] inline-block">
 										{l.name}
 									</Link>
 								</li>

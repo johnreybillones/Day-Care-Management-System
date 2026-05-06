@@ -13,8 +13,7 @@ export default function App() {
     <Router>
       <div className="flex min-h-screen flex-col">
         <Navbar />
-        <p className="px-4 py-2 text-center text-base font-semibold">Hello</p>
-        <div className="flex-1">
+<div className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
