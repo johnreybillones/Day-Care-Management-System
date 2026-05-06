@@ -1,4 +1,3 @@
-import React from "react";
 
 const WHAT_WE_DO = [
   "Digitize student records for faster and more accurate data access",
